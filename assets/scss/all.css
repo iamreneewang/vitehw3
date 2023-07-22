@@ -60,19 +60,6 @@ table {
   max-width: 1296px;
   margin: 0 auto;
   padding: 0 12px;
-  border: 2px solid white;
-}
-@media (max-width: 992px) {
-  .container {
-    max-width: 696px;
-    padding: 0 36px;
-  }
-}
-@media (max-width: 767px) {
-  .container {
-    max-width: 348px;
-    padding: 0 13px;
-  }
 }
 
 body {
@@ -100,6 +87,11 @@ img {
   font-size: 20px;
   color: white;
 }
+@media (max-width: 767px) {
+  .header .container {
+    padding: 0;
+  }
+}
 .header h1 > a {
   display: block;
   background-image: url("/assets/images/logo-white.png");
@@ -110,10 +102,22 @@ img {
   white-space: nowrap;
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  .header h1 > a {
+    margin: 15px;
+  }
+}
 .header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 767px) {
+  .header nav {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
 }
 .header nav ul {
   display: flex;
@@ -122,6 +126,7 @@ img {
 @media (max-width: 767px) {
   .header nav ul {
     flex-wrap: wrap;
+    width: 100%;
   }
 }
 .header nav li {
@@ -134,8 +139,7 @@ img {
     text-align: center;
     border: 1px solid #fff;
     padding: 12px 0;
-    margin-left: 0;
-    width: calc(50% - 2px);
+    width: 50%;
   }
 }
 
