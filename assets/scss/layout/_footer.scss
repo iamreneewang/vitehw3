@@ -1,4 +1,144 @@
-.footer{
+.footer {
   background: $primary;
-  font-size: 64px;
+  color: white;
+
+  .footer-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    margin-bottom: 24px;
+    padding-top: 48px;
+
+    @include mobile {
+      padding-top: 24px;
+    }
+
+    .footer-nav {
+      display: flex;
+      align-items: center;
+
+      @include mobile {
+        display: none;
+      }
+
+      a {
+        padding-right: 48px;
+      }
+
+    }
+
+    a {
+      display: block;
+    }
+
+    .footer-icon {
+      @include mobile {
+        img {
+          width: 24px;
+          height: 24px;
+        }
+
+        font-size: 1rem;
+        order: 1;
+      }
+    }
+  }
+
+
+  .footer-icon {
+    display: flex;
+
+    img {
+      max-width: 48px;
+      margin-left: 32px;
+    }
+
+  }
+
+  .footer-detail {
+    font-size: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      width: 40%;
+    }
+
+
+  }
+
+  .mail {
+    @include mobile {
+      order: 2;
+      margin-top: 8px;
+
+      h3 {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .phone {
+    margin-top: 36px;
+
+    @include mobile {
+      margin-top: 0;
+
+      h3 {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .material-symbols-outlined {
+    display: block;
+    font-size: 36px;
+    margin-right: 22px;
+
+    @include mobile {
+      font-size: 18px;
+      margin-right: 11px;
+    }
+  }
+
+  .copyright {
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      padding: 24px 12px;
+    }
+
+    &-sub {
+      display: flex;
+      font-size: 0.88rem;
+
+      @include mobile {
+        flex-direction: column;
+      }
+      
+      li{
+        @include mobile {
+          margin-top: 8px;
+        }
+      }
+
+
+
+      a {
+        padding-left: 48px;
+
+        @include mobile {
+          padding-left: 0px;
+          width: 100%;
+        }
+      }
+
+    }
+
+  }
 }
