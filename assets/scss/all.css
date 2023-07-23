@@ -62,7 +62,7 @@ table {
   padding: 0 12px;
 }
 
-body {
+body, button {
   font-family: "Noto Sans TC", sans-serif;
   line-height: 1.5;
 }
@@ -180,103 +180,180 @@ img {
 .footer .footer-info .footer-nav a {
   padding-right: 48px;
 }
-.footer .footer-info a {
-  display: block;
+
+.footer-icon {
+  display: flex;
+}
+.footer-icon img {
+  max-width: 48px;
+  margin-left: 32px;
 }
 @media (max-width: 767px) {
-  .footer .footer-info .footer-icon {
+  .footer-icon {
     font-size: 1rem;
     order: 1;
   }
-  .footer .footer-info .footer-icon img {
+  .footer-icon img {
     width: 24px;
     height: 24px;
   }
 }
-.footer .footer-icon {
-  display: flex;
-}
-.footer .footer-icon img {
-  max-width: 48px;
-  margin-left: 32px;
-}
-.footer .footer-detail {
+
+.footer-detail {
   font-size: 2rem;
   width: 100%;
   display: flex;
   align-items: center;
 }
 @media (max-width: 767px) {
-  .footer .footer-detail {
+  .footer-detail {
     width: 40%;
   }
 }
-@media (max-width: 767px) {
-  .footer .mail {
-    order: 2;
-    margin-top: 8px;
-  }
-  .footer .mail h3 {
-    font-size: 1rem;
-  }
-}
-.footer .phone {
-  margin-top: 36px;
-}
-@media (max-width: 767px) {
-  .footer .phone {
-    margin-top: 0;
-  }
-  .footer .phone h3 {
-    font-size: 1rem;
-  }
-}
-.footer .material-symbols-outlined {
+
+.material-symbols-outlined {
   display: block;
   font-size: 36px;
   margin-right: 22px;
 }
 @media (max-width: 767px) {
-  .footer .material-symbols-outlined {
+  .material-symbols-outlined {
     font-size: 18px;
     margin-right: 11px;
   }
 }
-.footer .copyright {
+
+@media (max-width: 767px) {
+  .mail {
+    order: 2;
+    margin-top: 8px;
+  }
+  .mail h3 {
+    font-size: 1rem;
+  }
+}
+
+.phone {
+  margin-top: 36px;
+}
+@media (max-width: 767px) {
+  .phone {
+    margin-top: 0;
+  }
+  .phone h3 {
+    font-size: 1rem;
+  }
+}
+
+.copyright {
   border-top: 1px solid white;
   display: flex;
   justify-content: space-between;
 }
 @media (max-width: 767px) {
-  .footer .copyright {
+  .copyright {
     flex-direction: column;
     padding: 24px 12px;
   }
 }
-.footer .copyright-sub {
+.copyright-sub {
   display: flex;
   font-size: 0.88rem;
 }
 @media (max-width: 767px) {
-  .footer .copyright-sub {
+  .copyright-sub {
     flex-direction: column;
   }
 }
 @media (max-width: 767px) {
-  .footer .copyright-sub li {
+  .copyright-sub li {
     margin-top: 8px;
   }
 }
-.footer .copyright-sub a {
+.copyright-sub a {
   padding-left: 48px;
 }
 @media (max-width: 767px) {
-  .footer .copyright-sub a {
+  .copyright-sub a {
     padding-left: 0px;
     width: 100%;
   }
 }
 
-.index-title {
-  font-size: 100px;
+.banner {
+  background-image: url("/assets/images/home-header-sm.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #650300;
+  text-align: right;
+  padding: 296px 0px;
+}
+.banner p {
+  font-size: 36px;
+}
+.banner h2 {
+  font-size: 64px;
+  font-weight: bold;
+}
+.banner button {
+  font-size: 20px;
+  padding: 6px 12px;
+  border: 0;
+  background-color: #AA0601;
+  color: white;
+  margin-top: 4px;
+}
+
+.intro, .classic, .design, .recommendation, .contact-us {
+  padding: 80px 0px;
+}
+.intro h3, .classic h3, .design h3, .recommendation h3, .contact-us h3 {
+  color: #650300;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.intro {
+  background-color: #FBF2F2;
+}
+.intro-sub {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.intro img {
+  width: 83px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+.intro h4 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #650300;
+  text-align: center;
+}
+.intro p {
+  text-align: left;
+  padding-top: 8px;
+}
+.intro li {
+  flex-basis: 24.5%;
+}
+
+.design {
+  background-image: url("/assets/images/index-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.design h3 {
+  color: white;
+}
+
+.contact-us {
+  background-color: #FBF2F2;
 }/*# sourceMappingURL=all.css.map */

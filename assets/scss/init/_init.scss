@@ -3,7 +3,16 @@
 
 $primary: #AA0601;
 $secondary: #FBF2F2;
+$primary-dark:#650300;
 
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-18: 18px;
+$font-size-20: 20px;
+$font-size-24: 24px;
+$font-size-36: 36px;
+$font-size-48: 48px;
+$font-size-64: 64px;
 
 *,
 *:before,
@@ -19,7 +28,7 @@ $secondary: #FBF2F2;
     // border: 2px solid white;
 }
 
-body {
+body,button {
     font-family: 'Noto Sans TC', sans-serif;
     line-height: 1.5;
 }

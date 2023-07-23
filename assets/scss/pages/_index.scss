@@ -1,3 +1,102 @@
-.index-title {
-  font-size: 100px;
+.banner {
+  background-image: url("/assets/images/home-header-sm.png");
+  background-size: cover; //維持原尺寸
+  background-repeat: no-repeat; //背景不重複
+  background-position: center center; //背景圖片置中
+  // background-size: cover;
+  // background: url("/assets/images/home-header-sm.png") no-repeat center center;
+  color: $primary-dark;
+  text-align: right;
+  padding: 296px 0px;
+
+  p {
+    font-size: $font-size-36;
+
+  }
+
+  h2 {
+    font-size: $font-size-64;
+    font-weight: bold;
+  }
+
+  button {
+    font-size: $font-size-20;
+    padding: 6px 12px;
+    border: 0;
+    background-color: $primary;
+    color: white;
+    margin-top: 4px;
+  }
 }
+
+.intro,.classic,.design,.recommendation,.contact-us{
+  padding: 80px 0px;
+  h3{
+    color: $primary-dark;
+    font-size: $font-size-48;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.intro {
+  background-color: $secondary;
+  &-sub {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  img {
+    width: 83px;
+    object-fit: cover;
+    margin-top: 32px;
+    margin-bottom: 24px;
+  }
+
+  h4 {
+    font-size: $font-size-24;
+    font-weight: bold;
+    color: $primary-dark;
+    text-align: center;
+  }
+
+  p {
+    text-align: left;
+    padding-top: 8px;
+  }
+
+  li {
+    // border: 2px solid blue;
+    flex-basis: 24.5%;
+  }
+}
+
+
+.design{
+  background-image: url("/assets/images/index-bg.png");
+  background-size: cover; //維持原尺寸
+  background-repeat: no-repeat; //背景不重複
+  background-position: center center; //背景圖片置中
+  // background-size: cover;
+  // background: url("/assets/images/index-bg.png") no-repeat center center;
+
+  h3 {
+    color: white;
+  }
+
+}
+
+
+.recommendation{
+
+}
+
+
+.contact-us{
+  background-color: $secondary;
+}
+
+// .container {
+//   border: 2px solid blue;
+// }
