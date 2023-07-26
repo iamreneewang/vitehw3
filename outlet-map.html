@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>about</title>
-    <script type="module" crossorigin src="/vitehw3/assets/main-31c0b07b.js"></script>
-    <link rel="stylesheet" href="/vitehw3/assets/main-3ac50ac2.css">
-  </head>
-  <body>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>門市位置地圖</title>
+  <script type="module" crossorigin src="/vitehw3/assets/main-31c0b07b.js"></script>
+  <link rel="stylesheet" href="/vitehw3/assets/main-3ac50ac2.css">
+</head>
+
+<body>
     <h1 class="header">
     <div class="container">
         <nav>
@@ -24,8 +27,50 @@
 </h1>
 <!-- <a href="index.html">index</a>
 <a href="about.html">about</a>
-<a href="contact.html">contact</a> -->    <h1>我是about</h1>
-    <footer class="footer">
+<a href="contact.html">contact</a> -->        <div class="container outlet-map-page">
+            <h2>門市據點</h2>
+            <label for="location" class="mb-8 lbl_location">選擇地區</label>
+            <select id="location" name="location" class="dropdown_location">
+                <option value="1">台北市</option>
+                <option value="2">台中市</option>
+                <option value="3">高雄市</option>
+            </select>
+        </div>
+
+        <div class="container-x outlet-map-sub">
+            <div class="card">
+                <img src="/vitehw3/assets/store-1-e8e7cac3.png" alt="store-1">
+                <div class="card-body">
+                    <h3>台北中山旗艦店</h3>
+                    <div class="card-body-detail">
+                        <div class="item">
+                            <span class="material-symbols-outlined">call</span>
+                            <p>電話：(02)000-1234</p>
+                        </div>
+                        <div class="item">
+                            <span class="material-symbols-outlined">schedule</span>
+                            <p>營業時間：10:00-21:00</p>
+                        </div>
+                        <div class="item">
+                            <span class="material-symbols-outlined">location_on</span>
+                            <p>地址：台北市中山區南京東路25巷2-1號</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="outlet-map.html">詳細資訊</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="iframe-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7228.957112921955!2d121.53551523410472!3d25.051764219369293!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9611c1d7c4d%3A0x4fcd2e2c65c4f29d!2z5p2-5rGf5Y2X5Lqs!5e0!3m2!1szh-TW!2stw!4v1690297539947!5m2!1szh-TW!2stw"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <footer class="footer">
     <div class="container footer-info">
         <ul class="footer-nav">
             <li><a href="index.html">首頁</a></li>
@@ -62,6 +107,7 @@
         </ul>
     </div>
 </footer>
-    
-  </body>
+            
+</body>
+
 </html>
