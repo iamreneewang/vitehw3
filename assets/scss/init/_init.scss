@@ -3,7 +3,7 @@
 
 $primary: #AA0601;
 $secondary: #FBF2F2;
-$primary-dark:#650300;
+$primary-dark: #650300;
 
 $font-size-14: 14px;
 $font-size-16: 16px;
@@ -21,14 +21,26 @@ $font-size-64: 64px;
 }
 
 .container {
-    max-width: 1296px;
+    // max-width: 1296px; 1296+12+12=1320
+    max-width: 1320px;
     margin: 0 auto;
     // 左右留白
     padding: 0 12px;
     // border: 2px solid white;
 }
 
-body,button {
+.container-x {
+    // max-width: 1320px+12+12=1344
+    max-width: 1344px;
+    margin: 0 auto;
+    // 左右留白
+    padding: 0 12px;
+    // border: 2px solid white;
+}
+
+body,
+button,
+select {
     font-family: 'Noto Sans TC', sans-serif;
     line-height: 1.5;
 }
@@ -50,10 +62,38 @@ img {
     //image預設對齊base line，image會有多餘空間，處理IMAGE多餘空間使用
 }
 
+.lbl_location{
+    font-size: $font-size-24;
+}
+
+.text-align-center{
+ text-align: center;
+}
+
+.mb-8 {
+    margin-bottom: 8px;
+}
+
+.mb-16 {
+    margin-bottom: 16px;
+}
+
+.mb-22 {
+    margin-bottom: 22px;
+}
+
+.mb-24 {
+    margin-bottom: 24px;
+}
+
+.mt-48 {
+    margin-top: 48px;
+}
+
 .pt-32 {
-    padding-top:32px;
+    padding-top: 32px;
 }
 
 .pb-32 {
-    padding-bottom:32px;
+    padding-bottom: 32px;
 }

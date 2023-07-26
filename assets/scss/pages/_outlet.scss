@@ -1,0 +1,125 @@
+.outlet-location {
+    // border: 2px solid blue;
+    padding-top: 96px;
+    padding-bottom: 40px;
+
+
+    h2 {
+        font-size: 48px;
+        font-weight: bold;
+        padding-left: 16px;
+        border-left: 8px solid $primary;
+        margin-bottom: 30px;
+    }
+
+    .dropdown_location {
+        // ***重要***清除下拉樣式，用三角形替換
+        // 清除三角形的樣式參考網址
+        // https://www.796t.com/content/1548687421.html
+        border: solid 1px #CED4DA;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;
+        padding: 6px 12px;
+        width: 304px;
+        font-size: $font-size-18;
+        margin-left: 16px;
+        color: #495057;
+        opacity: 0.75;
+
+        &::-ms-expand {
+            display: none;
+        }
+
+        background-position: right 12px center; // 將三角形往左移動 10px
+    }
+
+
+}
+
+.outlet-list {
+
+
+    ul {
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+
+        li {
+            margin-top: 28px;
+            flex-basis: 31.45%;
+            margin: 12px;
+
+            @include pad {
+                flex-basis: 45%;
+            }
+
+            @include mobile {
+                flex-basis: 100%;
+            }
+        }
+
+    }
+
+    h3 {
+        font-size: $font-size-24;
+        padding: 8px 24px;
+        border: 1px solid #00000020;
+    }
+
+    .card,
+    .card-body-detail {
+        border: 1px solid #00000020;
+        font-size: $font-size-20;
+    }
+
+    .card {
+        img {
+            height: 224px;
+            width: 100%;
+        }
+    }
+
+    .card-footer {
+        text-align: center;
+        background-color: black;
+
+        a {
+            padding: 16px;
+            display: block;
+            color: white;
+        }
+    }
+
+
+}
+
+
+.card-body-detail {
+    // padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+
+    .item .material-symbols-outlined {
+        font-size: $font-size-24;
+        margin-right: 5px;
+        padding: 5px 0;
+    }
+
+}
+
+
+.item {
+    display: flex;
+}
+
+.outlet-location-sub {
+    margin-bottom: 80px;
+
+    .outlet-list .card .card-body .card-body-detail {
+        padding: 16px 24px;
+    }
+}

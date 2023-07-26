@@ -9,14 +9,27 @@
   text-align: right;
   padding: 296px 0px;
 
+  @include mobile {
+    padding: 144px 0px;
+  }
+
+
   p {
     font-size: $font-size-36;
+
+    @include mobile {
+      font-size: $font-size-16;
+    }
 
   }
 
   h2 {
     font-size: $font-size-64;
     font-weight: bold;
+
+    @include mobile {
+      font-size: $font-size-24;
+    }
   }
 
   button {
@@ -29,27 +42,37 @@
   }
 }
 
-.intro,.classic,.design,.recommendation,.contact-us{
+.intro,
+.classic,
+.design,
+.recommendation,
+.contact-us {
   padding: 80px 0px;
-  h3{
+
+  h3 {
     color: $primary-dark;
     font-size: $font-size-48;
     font-weight: bold;
     text-align: center;
+
+    @include mobile {
+      font-size: $font-size-24;
+    }
   }
 }
 
 .intro {
   background-color: $secondary;
+
   &-sub {
     display: flex;
     justify-content: space-around;
     text-align: center;
+    flex-wrap: wrap;
   }
 
   img {
     width: 83px;
-    object-fit: cover;
     margin-top: 32px;
     margin-bottom: 24px;
   }
@@ -64,16 +87,84 @@
   p {
     text-align: left;
     padding-top: 8px;
+
+    @include pad {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    @include mobile {
+      padding-left: 14px;
+      padding-right: 14px;
+    }
   }
 
   li {
     // border: 2px solid blue;
-    flex-basis: 24.5%;
+    width: 23.8%;
+
+    @include pad {
+      width: 45%;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+
+  }
+
+
+
+
+}
+
+.classic .container ul,
+.design .container ul {
+  h4 {
+    margin: 8px 0;
+    color: $primary;
+    font-size: $font-size-48;
+    font-weight: bold;
+    font-style: Italic;
   }
 }
 
 
-.design{
+.classic .container ul {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-top: 48px;
+
+  li {
+    width: 32.2%;
+
+    @include pad {
+      width: 100%;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+
+  }
+}
+
+.classic .container ul li img {
+  @include pad {
+    padding-left: 216px;
+    padding-right: 216px;
+  }
+
+  @include mobile {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+
+
+.design {
   background-image: url("/assets/images/index-bg.png");
   background-size: cover; //維持原尺寸
   background-repeat: no-repeat; //背景不重複
@@ -87,16 +178,150 @@
 
 }
 
+.design .container ul {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
 
-.recommendation{
+  li {
+    background-color: white;
+    width: 50%;
+
+    @include pad {
+      margin: 16px 36px;
+      width: 100%;
+    }
+  }
+}
+
+.recommendation .container ul {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  flex-wrap: wrap;
+
+  @include pad {
+    justify-content: center;
+  }
+
+  li {
+    width: 23%;
+    //每一個等寬
+
+    @include pad {
+      width: 45%;
+      margin: 10px;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+
+  }
+}
+
+.recommendation .card {
+  height: 100%;
+  //這行重要，讓card等高，因為flex column
+  border: 1px solid #DEE2E6;
+  box-shadow: 0px 2px 6px #00000029;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.recommendation .card-body {
+  height: 205px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    height: 306px;
+    //FLEX排版下，如果要讓Image不要變形
+    object-fit: cover;
+    //跟父層radius-1px 縮進去一點就不會被切到
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+
+  p {
+    margin-bottom: 8px;
+  }
+
+  p:nth-child(2) {
+    flex: 1;
+  }
+
+  //此段重要，在flex的column排版下，讓第2個P撐開容器到最底，適用flex:1;
+
+  p:nth-child(3) {
+    font-size: $font-size-14;
+    color: #707070;
+  }
 
 }
 
-
-.contact-us{
+.contact-us {
   background-color: $secondary;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-us-sub {
+    margin-top: 48px;
+  }
+
 }
 
-// .container {
-//   border: 2px solid blue;
-// }
+.contact-us-form {
+  width: 49%;
+
+  @include pad {
+    width: 80%;
+  }
+
+
+  p {
+    font-size: $font-size-20;
+  }
+
+  .form-control {
+    width: 100%;
+    height: 36px;
+    margin-top: 8px;
+  }
+
+  #memo {
+    height: 136px;
+    resize: none;
+  }
+
+
+
+  .btn-submit {
+    padding: 16px 176px;
+    color: white;
+    font-weight: bold;
+    background-color: $primary;
+
+    @include pad {
+      padding: 16px 142px;
+    }
+
+    @include mobile {
+    padding: 0;
+    height: 4rem;
+    width: 90%;
+    }
+
+  }
+}
