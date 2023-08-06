@@ -16,10 +16,7 @@ padding-bottom: 80px;
         padding-left: 16px;
         border-left: 8px solid $primary;
         margin-bottom: 32px;
-        @include pad {
-          
-          }
-        
+    
           @include mobile {
             font-size: $font-size-24;
             margin-bottom: 24px;

@@ -1,0 +1,239 @@
+.blog-more-page {
+    .header-sub {
+        background-color: $primary-dark;
+
+        .material-symbols-outlined {
+            color: white;
+            padding: 13px 0;
+        }
+
+        @include mobile {
+            display: block;
+        }
+    }
+
+    .search-icon {
+        @include mobile {
+            display: none;
+        }
+    }
+
+    .header-sub-container {
+        max-width: 1320px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        @include mobile {
+            justify-content: center;
+        }
+    }
+
+    .header-sub-menu {
+        display: flex;
+        justify-content: space-between;
+
+        .menu {
+            margin: 12px 0;
+            padding-right: 48px;
+
+            @include mobile {
+                padding-right: 12px;
+            }
+
+            a {
+                text-decoration: none;
+                font-size: $font-size-20;
+                color: #ffffff;
+                padding: 0 12px;
+
+                @include mobile {
+                    font-size: $font-size-16;
+                }
+            }
+        }
+    }
+}
+
+//麵包屑導覽重要
+.breadcrumb {
+    margin-top: 24px;
+
+    ul {
+        display: flex;
+
+        li {
+            &:last-child span[aria-current="page"] {
+                color: $primary;
+            }
+
+            &:not(:last-child)::after {
+                content: "/";
+                margin: 10px;
+                margin-right: 5px;
+            }
+
+            a {
+                color: black;
+            }
+        }
+    }
+}
+
+//麵包屑導覽重要
+
+.tag {
+
+    a {
+        font-size: $font-size-24;
+        font-weight: bold;
+        color: $primary;
+        margin-right: 15px;
+
+        @include pad {
+            font-size: $font-size-16;
+        }
+    }
+}
+
+
+.blog-more-page-main {
+    margin-top: 8px;
+    display: flex;
+    gap: 24px;
+}
+
+.blog-more-page-info {
+    flex-basis: 66.1%;
+    margin-bottom: 80px;
+
+    @include mobile {
+        flex-basis: 100%;
+        margin-bottom: 64px;
+    }
+
+    h2 {
+        font-size: $font-size-48;
+
+        @include mobile {
+            font-size: $font-size-24;
+        }
+    }
+
+    h3 {
+        font-size: $font-size-24;
+
+        @include mobile {
+            font-size: $font-size-16;
+        }
+    }
+
+    .info-item {
+        margin-top: 40px;
+
+        //:first-of-type 
+        &:first-of-type {
+            margin-top: 16px;
+        }
+
+        p {
+            margin-top: 8px;
+            color: #555555;
+        }
+    }
+}
+
+.blog-more-page-tags {
+
+    @include mobile {
+        display: none;
+    }
+
+    .tags-main {
+        display: flex;
+        align-items: center;
+
+        .material-symbols-outlined {
+            color: $primary;
+            font-size: $font-size-32;
+            font-weight: bold;
+            margin-right: 12px;
+        }
+
+        .h3-tag {
+            color: $primary;
+            font-weight: bold;
+            font-size: $font-size-32;
+
+            @include pad {
+                font-size: $font-size-16;
+            }
+        }
+    }
+
+    .tags-item {
+        display: flex;
+
+        a {
+            font-size: $font-size-24;
+            font-weight: bold;
+            margin-right: 24px;
+            color: $primary;
+
+
+            @include pad {
+                font-size: $font-size-16;
+            }
+        }
+    }
+
+}
+
+.share-link {
+    margin-top: 40px;
+    display: flex;
+    gap: 1rem;
+
+    @include mobile {
+        display: none;
+    }
+
+
+    a {
+        display: block;
+        flex-basis: 24px;
+
+    }
+}
+
+.blog-more-interview {
+    padding-top: 24px;
+    margin-top: 1rem;
+    border-top: 2px solid #555555;
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+        display: none;
+    }
+
+    &-before,
+    &-after {
+        align-items: center;
+        display: flex;
+        gap: 0;
+
+        .material-symbols-outlined {
+            margin-right: 0px;
+            font-size: $font-size-16;
+        }
+    }
+
+    a {
+        color: black;
+    }
+
+    span {
+        display: block;
+    }
+}

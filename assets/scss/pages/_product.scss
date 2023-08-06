@@ -1,0 +1,250 @@
+.product-page {
+    a {
+        display: block;
+        border: 1px solid gray;
+    }
+
+    //這個tabs重點，純CSS也有block，好維護
+    .tabs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .tabs-label {
+        padding: 24px 0;
+        cursor: pointer;
+        font-size: 2rem;
+        flex: 1;
+        border: 1px solid #DCDCDC;
+
+        @include pad {
+            font-size: 1.5rem;
+            padding: 16px 0;
+        }
+
+        @include mobile {
+            font-size: 1rem;
+            padding: 16px 0;
+        }
+    }
+
+    .tabs-radio {
+        display: none;
+    }
+
+    .tabs-content {
+        order: 1;
+        width: 100%;
+        line-height: 1.5;
+        font-size: 0.9em;
+        display: none;
+    }
+
+    .tabs-radio:checked+.tabs-label {
+        font-weight: bold;
+        border-radius: 0;
+        border-bottom: 8px solid $primary;
+    }
+
+    .tabs-radio:checked+.tabs-label+.tabs-content {
+        display: initial;
+    }
+
+    .product-banner {
+        //重點子層突破父層寬度滿版，並且置中
+        width: 100vw;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        //重點子層突破父層寬度滿版，並且置中
+        display: flex;
+
+        @include pad {
+            width: 100%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        img {
+            width: 50%;
+            min-height: 296px;
+            object-fit: cover;
+
+            @include mobile {
+                min-height: 136px;
+            }
+        }
+    }
+
+}
+
+.product-page-sub-one .card {
+    // border: 1px solid #00000020;
+    font-size: $font-size-24;
+    margin: 12px;
+}
+
+.product-page-sub-one,
+.product-page-sub-two {
+
+    h3 {
+        font-size: 42px;
+        margin-top: 80px;
+
+        @include mobile {
+            font-size: 24px;
+        }
+    }
+
+    h4 {
+        font-size: 32px;
+        font-family: 'Noto Sans TC', sans-serif;
+
+        @include mobile {
+            font-size: 24px;
+        }
+    }
+
+
+    ul {
+        margin-top: 32px;
+        margin-bottom: 80px;
+        display: flex;
+        flex-wrap: wrap;
+
+        @include pad {
+            justify-content: space-between;
+        }
+
+        @include mobile {
+            justify-content: center;
+        }
+    }
+
+    .card {
+
+
+        img {
+            height: 224px;
+            //讓圖片不會變形
+            object-fit: cover;
+        }
+    }
+
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+
+        li {
+            width: 42px;
+
+            /* 頭尾元素寬度為42 */
+            &:first-child,
+            &:last-child {
+                width: 81px;
+                /* 頭尾元素寬度為81 */
+            }
+        }
+
+        a {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            display: block;
+            padding: 8px 12px;
+            color: black;
+
+            &.active {
+                background-color: #000;
+                color: #ffffff;
+                border-color: #000;
+            }
+        }
+
+
+    }
+
+
+
+}
+
+.product-page-sub-one .card-body-info {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+        font-family: 'Roboto', sans-serif;
+
+        &:last-child {
+            color: red;
+        }
+    }
+}
+
+.product-page-sub-two .card-body-info {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+        font-size: 24px;
+        font-family: 'Roboto', sans-serif;
+
+        &:last-child {
+            color: red;
+        }
+    }
+}
+
+.dark-box {
+    background-color: #5F3E2D;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.light-box {
+    background-color: #B75929;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+
+
+.product-page-sub-one li {
+    width: 25%;
+
+    @include pad {
+        width: 50%;
+    }
+
+    @include mobile {
+        width: 100%;
+    }
+}
+
+.product-page-sub-two li {
+    .card {
+        padding: 12px;
+    }
+
+    width: 33%;
+
+    
+    @include pad {
+        width: 50%;
+    }
+
+    @include mobile {
+        width: 100%;
+    }
+}

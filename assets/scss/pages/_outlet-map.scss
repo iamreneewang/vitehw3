@@ -44,14 +44,23 @@
     display: flex;
     // justify-content: space-between;
     gap: 24px;
+    flex-wrap: wrap;
 
     .card {
         flex-basis: 40%;
+
+        @include pad {
+            flex-basis: 100%;
+        }
+
+        // @include mobile {
+        //     width: 100%;
+        // }
     }
 
-    .card-body{
-        h3{
-            padding:8px 24px;
+    .card-body {
+        h3 {
+            padding: 8px 24px;
             border: 1px solid #00000020;
         }
     }
@@ -63,10 +72,35 @@
     }
 
     .card {
+
+        @include pad {
+            display: flex;
+            gap: 24px;
+            border: none;
+        }
+
+        @include mobile {
+            display: block;
+            gap: 0;
+            border: 1px solid #00000020;
+        }
+
+
         img {
             height: 224px;
             width: 100%;
+
+            @include pad {
+                flex: 1;
+            }
         }
+
+        .card-body {
+            @include pad {
+                flex: 1;
+            }
+        }
+
     }
 
     .card-body-detail {
@@ -110,10 +144,19 @@
         //撐滿橫向容器
         // border: 2px solid red;
         flex-basis: 56.52%;
+
+        @include pad {
+            flex-basis: 100%;
+        }
+
         iframe {
             //等高
             height: 100%;
             width: 100%;
+
+            @include pad {
+                min-height: 414px;
+            }
         }
     }
 }
